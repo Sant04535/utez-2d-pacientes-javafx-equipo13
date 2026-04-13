@@ -1,3 +1,4 @@
+
 package org.example.consultorio;
 
 import javafx.application.Application;
@@ -8,15 +9,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Consultoio - Directorio de Pacientes");
+        FXMLLoader fxmlLoader = new FXMLLoader(
+                HelloApplication.class.getResource("hello-view.fxml")
+        );
+        Scene scene = new Scene(fxmlLoader.load(), 950, 600);
+        stage.setTitle("Consultorio - Directorio de Pacientes");
         stage.setScene(scene);
+        stage.setResizable(true);
         stage.show();
     }
-    public static void main(String[]args){
+
+    public static void main(String[] args) {
         launch();
     }
 }
